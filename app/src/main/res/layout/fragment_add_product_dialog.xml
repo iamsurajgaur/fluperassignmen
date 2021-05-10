@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:id="@+id/rootlayout"
+    tools:context=".view.dialog.AddProductDialog">
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/text_input_layout_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="60dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/round_corner_textfields"
+        android:hint="name">
+
+        <EditText
+            android:id="@+id/emailET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:maxLength="100"
+            android:singleLine="true"
+            android:layout_margin="3dp"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:textColorHint="@color/et_hint"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        app:layout_constraintTop_toBottomOf="@id/text_input_layout_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/text_input_layout_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="60dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/round_corner_textfields"
+        android:hint="description">
+
+        <EditText
+            android:id="@+id/et_desc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:maxLength="100"
+            android:singleLine="true"
+            android:layout_margin="3dp"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:textColorHint="@color/et_hint"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        app:layout_constraintTop_toBottomOf="@id/text_input_layout_description"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/text_input_layout_r_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="60dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/round_corner_textfields"
+        android:hint="regular price">
+
+        <EditText
+            android:id="@+id/et_r_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:maxLength="5"
+            android:layout_margin="3dp"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:textColorHint="@color/et_hint"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        app:layout_constraintTop_toBottomOf="@id/text_input_layout_r_price"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/text_input_layout_s_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="60dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/round_corner_textfields"
+        android:hint="sale price">
+
+        <EditText
+            android:id="@+id/et_s_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:maxLines="5"
+            android:layout_margin="3dp"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:textColorHint="@color/et_hint"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_input_layout_s_price"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnAdd"
+        android:text="Dismiss"
+        android:id="@+id/btnDismiss"
+        android:textAllCaps="false"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_input_layout_s_price"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@id/btnDismiss"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Add"
+        android:id="@+id/btnAdd"
+        android:textAllCaps="false"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
